@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Arnav</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="bg-grid"></div>
+<div class="bg-orb"></div>
+
+<div class="floating-shapes">
+  <span class="shape shape-hex s1"></span>
+  <span class="shape shape-square s2"></span>
+  <span class="shape shape-circle s3"></span>
+  <span class="shape shape-hex s4"></span>
+  <span class="shape shape-square s5"></span>
+  <span class="shape shape-circle s6"></span>
+</div>
+
+<nav class="navbar">
+  <a href="index.html" class="brand"><div class="brand-mark">A</div>Arnav</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="ventures.html">Ventures</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="skills.html">Skills</a></li>
+  </ul>
+  <a href="contact.html" class="nav-cta">Contact</a>
+</nav>
+
+<div class="contact-wrap">
+  <div class="section-head reveal" style="margin-bottom:36px;">
+    <div class="kicker">Contact</div>
+    <h2>Let's connect</h2>
+    <p>Reach out however works best for you.</p>
+  </div>
+
+  <div class="terminal-card reveal">
+    <div class="terminal-bar">
+      <span class="tdot td-red"></span>
+      <span class="tdot td-yellow"></span>
+      <span class="tdot td-green"></span>
+      <span class="terminal-title">contact.js</span>
+    </div>
+
+    <div class="terminal-body">
+<pre><code id="typedCode"></code></pre>
+    </div>
+  </div>
+
+  <div class="contact-links reveal">
+    <a href="mailto:you@example.com" class="contact-link" style="transition-delay:0.1s;">
+      <span class="cl-left"><span class="cl-icon cl-email">⌁</span>Email</span>
+      <span class="arrow">→</span>
+    </a>
+    <a href="#" class="contact-link" style="transition-delay:0.2s;">
+      <span class="cl-left"><span class="cl-icon cl-instagram">✦</span>Instagram</span>
+      <span class="arrow">→</span>
+    </a>
+    <a href="#" class="contact-link" style="transition-delay:0.3s;">
+      <span class="cl-left"><span class="cl-icon cl-discord">◈</span>Discord</span>
+      <span class="arrow">→</span>
+    </a>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <a href="index.html" class="footer-brand"><div class="brand-mark">A</div>Arnav</a>
+    <div class="footer-status"><span class="pulse-dot"></span> SYSTEM ONLINE — BUILT FROM SCRATCH</div>
+    <div class="footer-copy">© 2026 Arnav. All rights reserved.</div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script>
+  // Typewriter effect for the contact.js code block, then keep a blinking cursor
+  const codeLines = [
+    { text: '<span class="tk-kw">const</span> <span class="tk-var">arnav</span> = {', pause: 120 },
+    { text: '  <span class="tk-key">email</span>: <a href="mailto:you@example.com" class="tk-link">"you@example.com"</a>,', pause: 90 },
+    { text: '  <span class="tk-key">instagram</span>: <a href="#" class="tk-link tk-link-pink">"@yourhandle"</a>,', pause: 90 },
+    { text: '  <span class="tk-key">discord</span>: <a href="#" class="tk-link tk-link-indigo">"yourhandle"</a>,', pause: 90 },
+    { text: '  <span class="tk-key">status</span>: <span class="tk-str">"open to work"</span>', pause: 0 },
+    { text: '};', pause: 0 }
+  ];
+
+  const codeEl = document.getElementById('typedCode');
+  let li = 0;
+
+  function typeLine() {
+    if (li >= codeLines.length) {
+      codeEl.innerHTML += '<span class="type-cursor">|</span>';
+      return;
+    }
+    const raw = codeLines[li].text;
+    // reveal each line instantly as HTML (keeps tag integrity) but stagger line-by-line for a "typing" rhythm
+    const lineSpan = document.createElement('div');
+    lineSpan.innerHTML = raw;
+    lineSpan.style.opacity = '0';
+    lineSpan.style.transform = 'translateY(4px)';
+    lineSpan.style.transition = 'opacity 0.35s ease, transform 0.35s ease';
+    codeEl.appendChild(lineSpan);
+    requestAnimationFrame(() => {
+      lineSpan.style.opacity = '1';
+      lineSpan.style.transform = 'translateY(0)';
+    });
+    li++;
+    setTimeout(typeLine, 260 + codeLines[li - 1].pause);
+  }
+  typeLine();
+
+  // subtle parallax drift on floating shapes, following the pointer
+  const shapes = document.querySelectorAll('.shape');
+  document.addEventListener('mousemove', (e) => {
+    const relX = (e.clientX / window.innerWidth - 0.5) * 2;
+    const relY = (e.clientY / window.innerHeight - 0.5) * 2;
+    shapes.forEach((shape, i) => {
+      const depth = (i % 3 + 1) * 6;
+      shape.style.setProperty('--px', `${relX * depth}px`);
+      shape.style.setProperty('--py', `${relY * depth}px`);
+    });
+  });
+</script>
+</body>
+</html>

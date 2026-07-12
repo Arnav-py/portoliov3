@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects — Arnav</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="bg-grid"></div>
+<div class="bg-orb"></div>
+
+<nav class="navbar">
+  <a href="index.html" class="brand"><div class="brand-mark">A</div>Arnav</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="ventures.html">Ventures</a></li>
+    <li><a href="projects.html" class="active">Projects</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="skills.html">Skills</a></li>
+  </ul>
+  <a href="contact.html" class="nav-cta">Contact</a>
+</nav>
+
+<section class="section" id="projectsSection" style="padding-top:120px;">
+  <div class="section-head reveal" id="projectsHead">
+    <div class="kicker">Projects</div>
+    <h2>Things I've shipped</h2>
+    <p>Click a project to see more.</p>
+  </div>
+
+  <div class="card-grid" id="projectsList">
+    <div class="entity-card reveal" data-particle="rise" data-project="azortutils">
+      <div class="particle-layer"></div>
+      <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
+      <div class="entity-side">
+        <div class="entity-mark cat-discord">◈</div>
+        <div class="entity-index">01</div>
+      </div>
+      <div class="entity-body">
+        <div class="entity-top-row">
+          <div class="entity-name">Azort Utils</div>
+          <span class="cat-badge cat-discord-badge">◈ Discord</span>
+        </div>
+        <div class="entity-role">Utility Toolbox</div>
+        <p class="entity-desc">A dark toolbox of small web utilities — starting with a Discord token self-checker.</p>
+        <div class="entity-meta">
+          <span><span class="dot"></span>HTML / CSS / JS</span>
+          <span><span class="dot"></span>Live</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="entity-card reveal" data-particle="rise" data-project="placeholder1">
+      <div class="particle-layer"></div>
+      <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
+      <div class="entity-side">
+        <div class="entity-mark cat-instagram">✦</div>
+        <div class="entity-index">02</div>
+      </div>
+      <div class="entity-body">
+        <div class="entity-top-row">
+          <div class="entity-name">Project name</div>
+          <span class="cat-badge cat-instagram-badge">✦ Instagram</span>
+        </div>
+        <div class="entity-role">Short project type</div>
+        <p class="entity-desc">One or two lines on what it does and why you built it.</p>
+        <div class="entity-meta">
+          <span><span class="dot"></span>Stack</span>
+          <span><span class="dot"></span>Status</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="entity-card reveal" data-particle="rise" data-project="placeholder2">
+      <div class="particle-layer"></div>
+      <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
+      <div class="entity-side">
+        <div class="entity-mark cat-web">⌁</div>
+        <div class="entity-index">03</div>
+      </div>
+      <div class="entity-body">
+        <div class="entity-top-row">
+          <div class="entity-name">Add another project</div>
+          <span class="cat-badge cat-web-badge">⌁ Web</span>
+        </div>
+        <div class="entity-role">Short project type</div>
+        <p class="entity-desc">Duplicate this card whenever you ship something new.</p>
+        <div class="entity-meta">
+          <span><span class="dot"></span>Stack</span>
+          <span><span class="dot"></span>Status</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Inline expanded project detail -->
+  <article class="post-view" id="proj-azortutils" style="display:none;">
+    <a href="#" class="back-link" onclick="closeProject('proj-azortutils'); return false;">← Back to projects</a>
+    <div class="post-header">
+      <div class="blog-meta-top" style="justify-content:flex-start; gap:14px; margin-bottom:18px;">
+        <span class="cat-badge cat-discord-badge">◈ Discord</span>
+        <span class="blog-tag">Live</span>
+      </div>
+      <h1 class="post-title">Azort Utils</h1>
+      <p class="post-sub">A dark toolbox of small web utilities — starting with a Discord token self-checker.</p>
+    </div>
+    <div class="post-body">
+      <h3>◆ Overview</h3>
+      <p>Add a paragraph on what Azort Utils actually does and who it's for.</p>
+      <h3>⌁ Stack</h3>
+      <p>HTML, CSS, and vanilla JavaScript — no frameworks, runs entirely client-side.</p>
+      <h3>✦ Highlights</h3>
+      <p>Mention the token checker, the rate limiting, and anything else worth calling out.</p>
+    </div>
+  </article>
+
+  <article class="post-view" id="proj-placeholder1" style="display:none;">
+    <a href="#" class="back-link" onclick="closeProject('proj-placeholder1'); return false;">← Back to projects</a>
+    <div class="post-header">
+      <h1 class="post-title">Project name</h1>
+      <p class="post-sub">Fill in the full description once this project is ready.</p>
+    </div>
+    <div class="post-body">
+      <p>Add details here.</p>
+    </div>
+  </article>
+
+  <article class="post-view" id="proj-placeholder2" style="display:none;">
+    <a href="#" class="back-link" onclick="closeProject('proj-placeholder2'); return false;">← Back to projects</a>
+    <div class="post-header">
+      <h1 class="post-title">Add another project</h1>
+      <p class="post-sub">Duplicate a project block whenever you ship something new.</p>
+    </div>
+    <div class="post-body">
+      <p>Add details here.</p>
+    </div>
+  </article>
+</section>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <a href="index.html" class="footer-brand"><div class="brand-mark">A</div>Arnav</a>
+    <div class="footer-status"><span class="pulse-dot"></span> SYSTEM ONLINE — BUILT FROM SCRATCH</div>
+    <div class="footer-copy">© 2026 Arnav. All rights reserved.</div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script>
+  document.querySelectorAll('.entity-card[data-project]').forEach(card => {
+    card.addEventListener('click', () => openProject(card.getAttribute('data-project')));
+  });
+
+  function openProject(name) {
+    document.getElementById('projectsList').style.display = 'none';
+    document.getElementById('projectsHead').style.display = 'none';
+    document.getElementById('proj-' + name).style.display = 'block';
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function closeProject(id) {
+    document.getElementById(id).style.display = 'none';
+    document.getElementById('projectsList').style.display = 'flex';
+    document.getElementById('projectsHead').style.display = 'block';
+  }
+</script>
+</body>
+</html>

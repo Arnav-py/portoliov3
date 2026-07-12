@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Skills — Arnav</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="bg-grid"></div>
+<div class="bg-orb"></div>
+
+<nav class="navbar">
+  <a href="index.html" class="brand"><div class="brand-mark">A</div>Arnav</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="ventures.html">Ventures</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="skills.html" class="active">Skills</a></li>
+  </ul>
+  <a href="contact.html" class="nav-cta">Contact</a>
+</nav>
+
+<section class="section" style="padding-top:120px;">
+  <div class="section-head reveal">
+    <div class="kicker">Toolkit</div>
+    <h2>What I work with</h2>
+    <p><span id="typedLine"></span><span class="type-cursor">|</span></p>
+  </div>
+
+  <div class="card-grid">
+    <div class="entity-card reveal" data-particle="fall">
+      <div class="particle-layer"></div>
+      <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
+      <div class="entity-side">
+        <div class="entity-mark cat-web">⌘</div>
+        <div class="entity-index">01</div>
+      </div>
+      <div class="entity-body">
+        <div class="entity-name">Languages</div>
+        <div class="entity-role">Core</div>
+        <div class="skill-bars">
+          <div class="skill-bar" data-level="90">
+            <div class="skill-bar-top"><span>JavaScript</span><span class="skill-pct">90%</span></div>
+            <div class="skill-track"><div class="skill-fill"></div></div>
+          </div>
+          <div class="skill-bar" data-level="80">
+            <div class="skill-bar-top"><span>Python</span><span class="skill-pct">80%</span></div>
+            <div class="skill-track"><div class="skill-fill"></div></div>
+          </div>
+          <div class="skill-bar" data-level="95">
+            <div class="skill-bar-top"><span>HTML / CSS</span><span class="skill-pct">95%</span></div>
+            <div class="skill-track"><div class="skill-fill"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="entity-card reveal" data-particle="fall">
+      <div class="particle-layer"></div>
+      <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
+      <div class="entity-side">
+        <div class="entity-mark cat-instagram">◇</div>
+        <div class="entity-index">02</div>
+      </div>
+      <div class="entity-body">
+        <div class="entity-name">Frontend</div>
+        <div class="entity-role">Interfaces</div>
+        <div class="skill-bars">
+          <div class="skill-bar" data-level="85">
+            <div class="skill-bar-top"><span>React</span><span class="skill-pct">85%</span></div>
+            <div class="skill-track"><div class="skill-fill"></div></div>
+          </div>
+          <div class="skill-bar" data-level="88">
+            <div class="skill-bar-top"><span>Tailwind CSS</span><span class="skill-pct">88%</span></div>
+            <div class="skill-track"><div class="skill-fill"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="entity-card reveal" data-particle="fall">
+      <div class="particle-layer"></div>
+      <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
+      <div class="entity-side">
+        <div class="entity-mark cat-discord">⌁</div>
+        <div class="entity-index">03</div>
+      </div>
+      <div class="entity-body">
+        <div class="entity-name">Backend / Infra</div>
+        <div class="entity-role">Systems</div>
+        <div class="skill-bars">
+          <div class="skill-bar" data-level="82">
+            <div class="skill-bar-top"><span>Node.js</span><span class="skill-pct">82%</span></div>
+            <div class="skill-track"><div class="skill-fill"></div></div>
+          </div>
+          <div class="skill-bar" data-level="78">
+            <div class="skill-bar-top"><span>APIs & Webhooks</span><span class="skill-pct">78%</span></div>
+            <div class="skill-track"><div class="skill-fill"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="learning-strip reveal">
+    <span class="pulse-dot"></span>
+    <span class="learning-label">Currently exploring:</span>
+    <span class="learning-tags">
+      <span class="learning-tag">Rust</span>
+      <span class="learning-tag">WebGL</span>
+      <span class="learning-tag">System Design</span>
+    </span>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <a href="index.html" class="footer-brand"><div class="brand-mark">A</div>Arnav</a>
+    <div class="footer-status"><span class="pulse-dot"></span> SYSTEM ONLINE — BUILT FROM SCRATCH</div>
+    <div class="footer-copy">© 2026 Arnav. All rights reserved.</div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script>
+  // typing effect for the subheading line
+  const lines = ["Tools I reach for daily.", "Sharp where it counts.", "Always adding more."];
+  let lineIdx = 0, charIdx = 0, deleting = false;
+  const el = document.getElementById('typedLine');
+  function tick() {
+    const current = lines[lineIdx];
+    if (!deleting) {
+      el.textContent = current.slice(0, charIdx + 1);
+      charIdx++;
+      if (charIdx === current.length) { deleting = true; setTimeout(tick, 1400); return; }
+    } else {
+      el.textContent = current.slice(0, charIdx - 1);
+      charIdx--;
+      if (charIdx === 0) { deleting = false; lineIdx = (lineIdx + 1) % lines.length; }
+    }
+    setTimeout(tick, deleting ? 30 : 55);
+  }
+  tick();
+
+  // animate skill bar fills when they scroll into view
+  const bars = document.querySelectorAll('.skill-bar');
+  const barObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const fill = entry.target.querySelector('.skill-fill');
+        const level = entry.target.getAttribute('data-level');
+        fill.style.width = level + '%';
+        barObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.3 });
+  bars.forEach(bar => barObserver.observe(bar));
+</script>
+</body>
+</html>

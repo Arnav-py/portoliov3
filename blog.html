@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog — Arnav</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="bg-grid"></div>
+<div class="bg-orb"></div>
+
+<nav class="navbar">
+  <a href="index.html" class="brand"><div class="brand-mark">A</div>Arnav</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="ventures.html">Ventures</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="blog.html" class="active">Blog</a></li>
+    <li><a href="skills.html">Skills</a></li>
+  </ul>
+  <a href="contact.html" class="nav-cta">Contact</a>
+</nav>
+
+<section class="section" id="blogSection" style="padding-top:120px;">
+  <div class="section-head reveal">
+    <div class="kicker">Blog</div>
+    <h2>Notes & writeups</h2>
+    <p>Thoughts on what I'm building, decisions I made, and things I learned along the way.</p>
+  </div>
+
+  <div class="blog-grid" id="blogList">
+    <div class="blog-card reveal" data-post="post1">
+      <div class="blog-card-body">
+        <div class="blog-meta-top">
+          <span class="blog-date">JUL 2026</span>
+          <span class="blog-tag">Build log</span>
+        </div>
+        <h3>How I built Azort Utils</h3>
+        <p>The reasoning behind the design, the tools I picked, and why I kept it deliberately simple.</p>
+      </div>
+      <span class="blog-read">Read post →</span>
+    </div>
+
+    <div class="blog-card reveal disabled-post">
+      <div class="blog-card-body">
+        <div class="blog-meta-top">
+          <span class="blog-date">—</span>
+          <span class="blog-tag">Coming soon</span>
+        </div>
+        <h3>Why I started Sinux Development</h3>
+        <p>Add your next post here whenever it's ready.</p>
+      </div>
+      <span class="blog-read">Coming soon</span>
+    </div>
+
+    <div class="blog-card reveal disabled-post">
+      <div class="blog-card-body">
+        <div class="blog-meta-top">
+          <span class="blog-date">—</span>
+          <span class="blog-tag">Coming soon</span>
+        </div>
+        <h3>Add another post</h3>
+        <p>Duplicate a post block in this file whenever you want to write something new.</p>
+      </div>
+      <span class="blog-read">Coming soon</span>
+    </div>
+  </div>
+
+  <!-- Inline post view (hidden until a post is opened) -->
+  <article class="post-view" id="post1" style="display:none;">
+    <a href="#" class="back-link" onclick="closePost('post1'); return false;">← Back to blog</a>
+    <div class="post-header">
+      <div class="blog-meta-top" style="justify-content:flex-start; gap:14px; margin-bottom:18px;">
+        <span class="blog-date">JUL 2026</span>
+        <span class="blog-tag">Build log</span>
+      </div>
+      <h1 class="post-title">How I built Azort Utils</h1>
+      <p class="post-sub">The reasoning behind the design, the tools I picked, and why I kept it deliberately simple.</p>
+    </div>
+    <div class="post-body">
+      <p>Replace this with your actual post. A good structure: start with why you built the thing, then walk through a couple of the interesting decisions, then close with what you'd do differently next time.</p>
+      <h3>Why I built it</h3>
+      <p>Write a paragraph here about the problem you noticed and why existing options didn't fit.</p>
+      <h3>Key decisions</h3>
+      <p>Talk through one or two technical or design choices — the stack, the layout, a tradeoff you made.</p>
+      <h3>What's next</h3>
+      <p>Wrap up with where the project is headed or what you learned building it.</p>
+    </div>
+  </article>
+</section>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <a href="index.html" class="footer-brand"><div class="brand-mark">A</div>Arnav</a>
+    <div class="footer-status"><span class="pulse-dot"></span> SYSTEM ONLINE — BUILT FROM SCRATCH</div>
+    <div class="footer-copy">© 2026 Arnav. All rights reserved.</div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script>
+  document.querySelectorAll('.blog-card[data-post]').forEach(card => {
+    card.addEventListener('click', () => openPost(card.getAttribute('data-post')));
+  });
+
+  function openPost(id) {
+    document.getElementById('blogList').style.display = 'none';
+    document.querySelector('.section-head').style.display = 'none';
+    document.getElementById(id).style.display = 'block';
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function closePost(id) {
+    document.getElementById(id).style.display = 'none';
+    document.getElementById('blogList').style.display = 'grid';
+    document.querySelector('.section-head').style.display = 'block';
+  }
+</script>
+</body>
+</html>

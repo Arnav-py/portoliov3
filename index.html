@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arnav</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="bg-grid"></div>
+
+<div class="name-modal-overlay" id="nameModalOverlay">
+  <div class="name-modal">
+    <h3>Welcome — what's your name?</h3>
+    <p class="name-modal-sub">Just so the site can greet you properly.</p>
+    <input type="text" id="nameModalInput" placeholder="Your name" autocomplete="off">
+    <p class="name-modal-consent">By submitting your name, you agree that your IP address and basic network/device details will be stored.</p>
+    <button id="nameModalSubmit">Continue</button>
+  </div>
+</div>
+<div class="bg-orb"></div>
+
+<nav class="navbar">
+  <a href="index.html" class="brand"><div class="brand-mark">A</div>Arnav</a>
+  <ul class="nav-links">
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="ventures.html">Ventures</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="skills.html">Skills</a></li>
+  </ul>
+  <a href="contact.html" class="nav-cta">Contact</a>
+</nav>
+
+<header class="hero">
+  <div class="viewer-count reveal" id="viewerCount">
+    <span class="viewer-icon">◎</span>
+    <span id="viewerNum">0</span>
+  </div>
+  <div class="eyebrow"><span class="pulse-dot"></span> CODEX FABRICATUR</div>
+  <h1>Building things<br>that <span class="cyan">just work.</span></h1>
+  <p class="subheading">Developer & Founder</p>
+  <p class="about-prose">
+    I'm <span class="hl-name">Arnav</span> — I design, build, and ship digital products from the ground up.
+    Right now I run <span class="hl-cyan">Azort Development</span> and <span class="hl-cyan">Sinux Development</span>,
+    two ventures focused on turning small ideas into tools people actually use.
+    Everything on this site — from the utilities to the code powering it — was
+    <span class="hl-name">built, tested, and shipped by me</span>.
+    No templates, no shortcuts — just clean execution.
+  </p>
+  <div class="hero-actions">
+    <a href="ventures.html" class="btn-primary">Ventures</a>
+    <a href="projects.html" class="btn-secondary">Projects</a>
+  </div>
+</header>
+
+<div class="ticker-strip">
+  <div class="ticker-label"><span class="pulse-dot"></span> Assets Under Management (AUM)</div>
+  <div class="ticker-grid">
+    <div class="ticker-item reveal" style="animation-delay:0.1s;">
+      <div class="ticker-currency">USD</div>
+      <div class="ticker-value" id="aumUSD">$248,900</div>
+      <div class="ticker-sub">Live · Updated Hourly</div>
+    </div>
+    <div class="ticker-item reveal" style="animation-delay:0.2s;">
+      <div class="ticker-currency">INR</div>
+      <div class="ticker-value" id="aumINR">₹2,07,00,000</div>
+      <div class="ticker-sub">Live · Updated Hourly</div>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <a href="index.html" class="footer-brand"><div class="brand-mark">A</div>Arnav</a>
+    <div class="footer-status"><span class="pulse-dot"></span> SYSTEM ONLINE — BUILT FROM SCRATCH</div>
+    <div class="footer-copy">© 2026 Arnav. All rights reserved.</div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
