@@ -1,14 +1,21 @@
 {
-  "background_color": "#ffffff",
-  "dir": "ltr",
+  "name": "Arnav — Portfolio",
+  "short_name": "Arnav",
+  "start_url": "/",
   "display": "standalone",
-  "name": "Test",
+  "background_color": "#0a0a0c",
+  "theme_color": "#0a0a0c",
   "orientation": "any",
   "scope": "/",
-  "short_name": "Tes",
-  "start_url": "/",
-  "theme_color": "#ffffff",
   "id": "arnavdagreat",
-  "description": "hellooo",
-  "lang": "en"
+  "description": "Developer & Founder - Azort and Sinux Development",
+  "lang": "en",
+  "dir": "ltr",
+  "icons": [
+    {
+      "src": "icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
 }
