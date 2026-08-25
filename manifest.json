@@ -1,0 +1,14 @@
+{
+  "background_color": "#ffffff",
+  "dir": "ltr",
+  "display": "standalone",
+  "name": "Test",
+  "orientation": "any",
+  "scope": "/",
+  "short_name": "Tes",
+  "start_url": "/",
+  "theme_color": "#ffffff",
+  "id": "arnavdagreat",
+  "description": "hellooo",
+  "lang": "en"
+}
